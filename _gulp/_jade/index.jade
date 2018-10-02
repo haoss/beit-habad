@@ -3,7 +3,7 @@ doctype
 html(lang="ru")
   
   -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - siteName' //title страницы для генерации верстки  
+  -var pageTitle = 'Главная' + ' - Бейт Хабад' //title страницы для генерации верстки  
 
   include ./_include/_head
 
@@ -15,13 +15,179 @@ html(lang="ru")
     include ./_include/_header
     
     .content
-      .container
-        
-        h1 Главная 2
-        
-        .row
-          .col-md-4 4 collumns
-          .col-md-8 8 collumns
+      
+      // About
+      .section.about
+        .container
+          
+          .content__head
+            .h1 Об общине
+          
+          .row
+            .about__left
+              p Местная Религиозная Организация  Ортодоксального Иудаизма Московская Еврейская Община Бейт Хабад на Мичуринском проспекте или  Бейт Хабад на Мичуринском.
+              p По инициативе главного раввина России Берла Лазара в октябре 2012 года в район Мичуринского проспекта из Марьиной Рощи переехала молодая еврейская семья посланников Любавичского ребе, семья раввина Шимона и Ханы Краснодомских.
+              p В Мае 2013 на территории бывшей еврейской школы «Мигдаль Ор» образовалась еврейская Община Бейт Хабад. 
+              
+              .clear
+              .visible-lg.visible-md
+                .clear10
+                a(href="#!").btn ПОДРОБНЕЕ ОБ ОБЩИНЕ
+            
+            .about__right
+              .about__right-img
+                img(src="./img/document/about.png", alt="")
+              .clear
+              .hidden-lg.hidden-md
+                a(href="#!").btn ПОДРОБНЕЕ ОБ ОБЩИНЕ
+      
+      // Events
+      .section.event
+        .container
+          
+          .content__head
+            .h1 Предстоящие мероприятия
+          
+        .event__list
+          .container
+            .event__list-wrapper
+              .event__list-row
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Шавуот - мороженное и вкусные угощения
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 20
+                        small мая
+                          br
+                          | 12:00
+                      img(src="./img/event/event-1.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Уборка  на Востряковском еврейском кладбище
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 3
+                        small июня
+                          br
+                          | 12:00
+                      img(src="./img/event/event-2.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Молодежный Шабат общины МГИМО - провед...
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 15
+                        small июля
+                          br
+                          | 12:00
+                      img(src="./img/event/event-3.png", alt="")
+          
+        .text-center
+          a(href="#!").btn Все мероприятия
+      
+      // Question
+      .section.question
+        .container
+          
+          .content__head
+            .h1 Вопрос раввину
+            
+          .question__form
+            img(src="./img/form-question.png", alt="").question__form-img
+            .question__form-wrapper
+              p Вы можете обратиться лично к раввину Шимону Краснодомскому и задать ему любой интересующий вас вопрос
+              form(action="#" method="post")
+                .row
+                  .col-one
+                    .form-group.has-error
+                      label.hidden Ваше имя
+                      input(type="text" placeholder="Ваше имя").form-control
+                  .col-two
+                    .form-group
+                      label.hidden Ваша почта
+                      input(type="email" placeholder="Ваша почта").form-control
+                .form-group
+                  label.hidden Текст обращения
+                  textarea(placeholder="Текст обращения").form-control
+                .question__form-btn
+                  button(type="button").btn ОТПРАВИТЬ
+                    i.icon.icon--4
+            
+      // Gallery
+      .section.gallery
+        .container
+          
+          .content__head
+            .h1 Фотогалерея
+          
+          .gallery__list
+            .gallery__list-wrapper.gallery__list-wrapper--main
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-1.png", alt="")
+                  .gallery__block-title EUROSTARS - тур по Европе
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-2.png", alt="")
+                  .gallery__block-title СПОРТ Пурим
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-3.png", alt="")
+                  .gallery__block-title Суккот
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-4.png", alt="")
+                  .gallery__block-title Ханука 5775
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-5.png", alt="")
+                  .gallery__block-title Подарки на Пурим - благотворительная акция
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-6.png", alt="")
+                  .gallery__block-title Внесение свитка Торы в Бейт Хабад на Мичуринском
+            .gallery__list-btn
+              a(href="#!").btn Все фото
+            
+      // CDAKA
+      .section
+        .container
+          
+          .content__head
+            .h1 ЦДАКА
+            
+      // Club
+      .section
+        .container
+          
+          .content__head
+            .h1 Молодежный клуб
+            
+      // Contacts
+      .section
+        .container
+          
+          .content__head
+            .h1 Контактные данные
 
     
     include ./_include/_footer

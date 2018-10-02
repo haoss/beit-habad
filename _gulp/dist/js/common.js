@@ -91,8 +91,8 @@ $(window).on('load', function() {
   $(".loader").delay(400).fadeOut("slow");
 });
 
-$(window).on('scroll', function() { console.log('scroll'); });
-$(window).on('resize', function() { console.log('resize'); });
+$(window).on('scroll', function() { });
+$(window).on('resize', function() { });
 
 /*
 version 2015-09-23 14:30 GMT +2

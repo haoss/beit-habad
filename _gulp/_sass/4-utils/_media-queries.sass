@@ -13,23 +13,243 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .about
+    &__right
+      &-img
+        max-width: 400px
+  .event
+    &__list
+      overflow-x: auto
+      &-row
+        margin: 0 -10px
+        &>div
+          padding: 0 10px
+    &__block
+      width: 270px
+  .question
+    &__form
+      &-img
+        right: 10px
+        width: 350px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  body
+    font-size: 20px
+  .h1, h1
+    font-size: 50px
+    margin-bottom: 30px
+    line-height: 1.25
+  p
+    line-height: 30px
+    margin-bottom: 32px
+  .btn
+    font-size: 20px
+  .section
+    &.about
+      padding-top: 80px
+  .about
+    &__left
+      float: none
+      max-width: none
+    &__right
+      float: none
+      &-img
+        margin: 0 0 64px 0
+        max-width: none
+  .event
+    &__list
+      &-wrapper
+        overflow: inherit
+      &-row
+        flex-wrap: nowrap
+        margin: 0
+        overflow: inherit
+        &>div
+          padding: 0
+          padding-right: 70px
+    &__block
+      width: 375px
+      &-title
+        font-size: 30px
+        line-height: 45px
+        margin-bottom: 25px
+      &-date
+        right: 15px
+        width: 76px
+        height: 80px
+        &::after
+          border-left-width: 38px
+          border-right-width: 38px
+          border-top-width: 18px
+          bottom: -18px
+        b
+          font-size: 37px
+        small
+          font-size: 18px
+          line-height: 25px
+  .question
+    &__form
+      height: auto
+      padding-bottom: 40px
+      &-img
+        display: none
+      &-wrapper
+        max-width: inherit
+        .col-one
+          width: 250px
+        .col-two
+          width: 312px
+          margin-left: 25px
+      &-btn
+        padding-top: 13px
+        text-align: center
+  .form
+    &-group
+      margin-bottom: 26px
+    &-control
+      height: 50px
+      font-size: 16px
+      padding-left: 25px
+      padding-right: 25px
+  textarea
+    &.form-control
+      height: 124px
+  .gallery
+    &__list
+      &-wrapper
+        flex-direction: column
+        margin: 0
+        &>div
+          width: 100%
+          padding: 0
+        &--main
+          &>div
+            display: none
+            &:nth-of-type(-n+3)
+              display: block
+      &-btn
+        padding-top: 5px
+    &__block
+      border-radius: 17px
+      margin-bottom: 35px
+      &-title
+        font-size: 30px
+        left: 30px
+        bottom: 40px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
-
-  .animated
-    transition-property: none !important
-    transform: none !important
-    animation: none !important
+  .section
+    padding: 30px 0
+    &.about
+      padding-top: 65px
+  .about
+    &__right
+      &-img
+        margin-bottom: 40px
+  .event
+    &__list
+      &-row
+        &>div
+          padding-right: 58px
+    &__block
+      width: 310px
+      &-title
+        font-size: 25px
+        line-height: 35px
+      &-date
+        right: 12px
+        width: 62px
+        height: 65px
+        &::after
+          border-left-width: 32px
+          border-right-width: 32px
+          border-top-width: 14px
+          bottom: -14px
+        b
+          font-size: 30px
+        small
+          font-size: 15px
+          line-height: 20px
+  .question
+    &__form
+      &-wrapper
+        .col-one, .col-two
+          float: none
+          width: 100%
+        .col-two
+          margin-left: 0
+  .gallery
+    &__list
+      &-btn
+        padding-top: 18px
+    &__block
+      border-radius: 10px
+      margin-bottom: 22px
+      &-title
+        left: 20px
+        bottom: 20px
+        font-size: 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  body
+    font-size: 15px
+  .h1, h1
+    font-size: 30px
+    margin-bottom: 35px
+  p
+    line-height: 20px
+    margin-bottom: 15px
+  .btn
+    font-size: 15px
+  .section
+    &.about
+      padding-top: 40px
+  .about
+    &__right
+      padding-top: 10px
+  .event
+    &__list
+      &-row
+        &>div
+          padding-right: 40px
+    &__block
+      width: 208px
+      &-title
+        font-size: 18px
+        line-height: 25px
+        margin-bottom: 13px
+      &-date
+        right: 7px
+        width: 42px
+        height: 44px
+        &::after
+          border-left-width: 21px
+          border-right-width: 21px
+          border-top-width: 10px
+          bottom: -10px
+        b
+          font-size: 20px
+        small
+          font-size: 10px
+          line-height: 14px
+  .question
+    &__form
+      padding-left: 20px
+      padding-right: 20px
+      &-wrapper
+  .gallery
+    &__list
+      &-btn
+        padding-top: 25px
+    &__block
+      margin-bottom: 15px
+      &-title
+        left: 14px
+        bottom: 14px
+        font-size: 15px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
@@ -40,26 +260,73 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-  /**/
+  .container
+    width: 100%
+    padding: 0 20px
+    margin: 0 auto
+    min-width: 320px
+  .section
+    min-width: 320px
+  .container
+    .section
+      min-width: inherit
+  .visible
+    display: block !important
+    opacity: 1 !important
+    visibility: visible !important
+    &-lg, &-md, &-sm
+      display: none !important
+  .hidden
+    opacity: 0 !important
+    display: none !important
+    visibility: hidden !important
+    &-xs
+      display: none !important
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
-  /**/
+  .container
+    padding: 0 30px
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
   .container
     width: 750px
+    padding: 0 50px
+  .visible-sm
+    display: block !important
+  .hidden
+    &-xs
+      display: block !important
+    &-sm
+      display: none !important
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
   .container
-    width: 970px
+    width: 950px
+  .visible-md
+    display: block !important
+  .hidden
+    &-xs, &-sm
+      display: block !important
+    &-md
+      display: none !important
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
   .container
-    width: 1170px
+    width: 1060px
+    padding: 0 15px
+  .visible-lg
+    display: block !important
+  .hidden-1200
+    display: none !important
+  .hidden
+    &-xs, &-sm, &-md
+      display: block !important
+    &-lg
+      display: none !important
 
 /* 1440 */
 @media only screen and (min-width : 1440px)

@@ -29,8 +29,8 @@ body
 
 body
   background: $color-white
-  font-size: 16px
-  font-family: $primary-font
+  font-size: 15px
+  font-family: $font-axiform-r
   color: $primary-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
@@ -38,34 +38,35 @@ body
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
   color: $primary-color
-  font-weight: bold
+  font-weight: 400
+  font-family: $font-axiform-r
   text-decoration: none
   margin: 0 0 15px 0
 
 .h1, h1
-  font-size: 21px
+  font-size: 30px
   line-height: 1.05
   letter-spacing: -1px
-  margin-bottom: 25px
+  margin-bottom: 30px
 
 .h2, h2
-  font-size: 18px
+  font-size: 20px
   line-height: 1.14
   margin-bottom: 20px
 
 .h3, h3
-  font-size: 16px
+  font-size: 15px
   line-height: 1.38
 
 .h4, h4
-  font-size: 14px
+  font-size: 13px
   line-height: 1.38
 
 .h5, h5
-  font-size: 13px
+  font-size: 10px
 
 .h6, h6
-  font-size: 12px
+  font-size: 10px
 
 .small, small
   font-size: 12px
@@ -73,13 +74,15 @@ body
 
 p
   line-height: 22px
-  margin: 0 0 20px 0
+  margin: 0 0 25px 0
 
 em, i, .em, .i
-  font-style: italic
+  font-style: normal
+  font-family: $font-axiform-i
 
 strong, b, .strong, .b
-  font-weight: bold
+  font-weight: 400
+  font-family: $font-axiform-b
 
 hr
   border: solid #ddd
@@ -104,13 +107,6 @@ a.link
   &:hover, &:focus, &:active
     text-decoration: none
 
-.container
-  margin: 0 auto
-  // width: 1280px
-  width: 100%
-  min-width: 320px
-  padding: 0 15px
-
 /* text align */
 .text
   &-center, &--center
@@ -130,20 +126,20 @@ a.link
   z-index: 10000
   background-color: $color-white
   &__block
-    background: $color-black
+    background: $color-blue
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
     position: absolute
     top: 50%
     left: 50%
-    color: $color-black
+    color: $color-blue
     text-indent: -9999em
     font-size: 11px
     animation-delay: -0.16s
     transform: translate(-50%,-50%)
     &:before, &:after
-      background: $color-black
+      background: $color-blue
       animation: load1 1s infinite ease-in-out
       width: 1em
       height: 4em
@@ -181,18 +177,8 @@ a.link
     display: block
     height: auto
     max-width: 100%
-
   &-round, &--round
     border-radius: 50%
-
-/* section */
-.section
-  padding: 50px 0
-  min-width: 320px
-
-.container
-  .section
-    min-width: inherit
 
 ul li
   list-style-type: disc
@@ -243,8 +229,8 @@ ol li
 /* icons */
 .icon
   display: inline-block
-  // &--sprite
-  //   @include sprite($img-name)
+  &--4
+    @include sprite($icon-4)
 
 /* color */
 .color
