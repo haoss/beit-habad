@@ -9,7 +9,11 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1439px)
-  /**/
+  .welcome
+    &__bg
+      &-right
+        img
+          transform: translateY(-250px) translateX(-330px)
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
@@ -31,6 +35,12 @@
       &-img
         right: 10px
         width: 350px
+  .welcome
+    &__bg
+      &-left
+        width: 54%
+      &-right
+        width: 46%
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -137,6 +147,44 @@
         font-size: 30px
         left: 30px
         bottom: 40px
+  .welcome
+    height: 790px
+    &__bg
+      &-wrapper
+        width: 991px
+        &>div
+          transform: none
+          float: none
+          position: absolute
+          left: 0
+          top: 0
+          right: 0
+          bottom: 0
+          width: 100%
+      &-left
+        z-index: 5
+        background: rgba($color-black,.7)
+      &-right
+        img
+          transform: translateY(-250px) translateX(-190px)
+    &__content
+      z-index: 20
+      color: $color-white
+      &>.container
+        height: 790px
+    &__title
+      font-size: 30px
+      line-height: 45px
+      margin-top: 175px
+      margin-bottom: 55px
+      b
+        font-size: 50px
+    &__advantage
+      width: 100%
+      &>div
+        width: 33.3%
+        &+div
+          padding-left: 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -191,6 +239,29 @@
         left: 20px
         bottom: 20px
         font-size: 20px
+  .welcome
+    height: auto
+    &__bg
+      position: unset
+      &-right
+        img
+          transform: translateX(-190px)
+          height: 100%
+          object-fit: cover
+    &__advantage
+      flex-direction: column
+      justify-content: center
+      &>div
+        width: 100%
+        &+div
+          padding-top: 28px
+    &__content
+      position: inherit
+      padding-bottom: 120px
+      &>.container
+        height: auto
+    &__title
+      margin: 100px 0 50px 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -250,6 +321,16 @@
         left: 14px
         bottom: 14px
         font-size: 15px
+  .welcome
+    &__title
+      font-size: 20px
+      margin: 60px 0 45px 10px
+      line-height: 30px
+      b
+        font-size: 35px
+    &__content
+      padding-bottom: 65px
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
