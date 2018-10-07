@@ -1,0 +1,143 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная' + ' - Бейт Хабад' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      // Events
+      .section.event.no--p-bottom
+        .container
+          
+          .content__head
+            .h1 Предстоящие мероприятия
+          
+        .event__list
+          .container
+            .event__list-wrapper
+              .event__list-row
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Шавуот - мороженное и вкусные угощения
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 20
+                        small мая
+                          br
+                          | 12:00
+                      img(src="./img/event/event-1.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Уборка  на Востряковском еврейском кладбище
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 3
+                        small июня
+                          br
+                          | 12:00
+                      img(src="./img/event/event-2.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Молодежный Шабат общины МГИМО
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 15
+                        small июля
+                          br
+                          | 12:00
+                      img(src="./img/event/event-3.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title EUROSTARS 2019
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 15
+                        small июля
+                          br
+                          | 12:00
+                      img(src="./img/event/event-3.png", alt="")
+          
+      // Events
+      .section.event
+        .container
+          
+          .content__head
+            .h1 Прошедшие мероприятия
+          
+        .event__list
+          .container
+            .event__list-wrapper
+              .event__list-row
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Пейсах - настоящий пасхальный седер 
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 20
+                        small мая
+                          br
+                          | 12:00
+                      img(src="./img/event/event-1.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Подарим праздник нуждающимся!
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 3
+                        small июня
+                          br
+                          | 12:00
+                      img(src="./img/event/event-2.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Спорт пурим
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 15
+                        small июля
+                          br
+                          | 12:00
+                      img(src="./img/event/event-3.png", alt="")
+          
+        .text-center
+          a(href="#!").btn ПОКАЗАТЬ еще
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
