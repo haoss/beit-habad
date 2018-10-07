@@ -1,3 +1,70 @@
 /* footer */
 .footer
-  background-color: $color-gray
+  background: #efefef
+  padding-top: 25px
+  padding-bottom: 5px
+  &__wrapper
+    +clearfix
+    &>div
+      float: left
+      width: 50%
+    &-left
+      font-size: 15px
+    &-right
+      font-size: 13px
+      p
+        line-height: 20px
+        margin-bottom: 15px
+    &-col
+      float: left
+      width: 50%
+      padding-left: 30px
+      &:first-child
+        padding-left: 65px
+      p
+        a
+          display: inline-block
+          color: $primary-color
+          text-decoration: none
+          &:hover
+            color: $color-blue
+  &__logo
+    white-space: nowrap
+    position: relative
+    padding-left: 45px
+    height: 38px
+    font-size: 20px
+    float: left
+    width: 175px
+    span
+      display: block
+      line-height: 24px
+    small
+      display: block
+      font-size: 13px
+    img
+      position: absolute
+      left: 5px
+      top: 5px
+      width: 29px
+      height: 29px
+  &__nav
+    float: left
+    width: calc(100% - 175px)
+    ul
+      margin: 0
+      padding: 0
+      overflow: hidden
+      li
+        list-style: none
+        padding-left: 22px
+        float: left
+        min-width: 40%
+        a
+          display: inline-block
+          color: $primary-color
+          text-decoration: none
+          margin-bottom: 5px
+          &:hover
+            color: $color-blue
+            text-decoration: none

@@ -41,6 +41,62 @@
         width: 54%
       &-right
         width: 46%
+  .footer
+    padding-bottom: 15px
+    &__nav
+      ul
+        li
+          float: none
+          min-width: inherit
+    &__wrapper
+      &-col
+        padding-left: 0px !important
+  .cdaka
+    &__list
+      &-row
+        margin: 0 -5px
+        &>div
+          padding: 0 5px
+  .header
+    &__logo
+      margin-top: 12px
+      font-size: 30px
+      padding-left: 60px
+      width: 245px
+      height: 50px
+      span
+        line-height: 30px
+      small
+        font-size: 20px
+      img
+        width: 50px
+        height: 50px
+        top: 0
+        left: 0
+    &__btn
+      display: block !important
+    &__nav
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      font-size: 30px
+      padding: 40px 0 50px 0
+      visibility: hidden
+      opacity: 0
+      &.is-active
+        opacity: 1
+        visibility: visible
+      ul
+        flex-direction: column
+        li
+          &>a, &>span
+            text-align: center
+            height: 60px
+            line-height: 60px
+    &__phone
+      margin-right: 120px
+      font-size: 30px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -78,6 +134,7 @@
         &>div
           padding: 0
           padding-right: 70px
+          width: auto
     &__block
       width: 375px
       &-title
@@ -185,6 +242,161 @@
         width: 33.3%
         &+div
           padding-left: 0
+  .club
+    font-size: 30px
+    p
+      line-height: 45px
+    &__photo
+      &-wrapper
+        &>div
+          &:first-child, &:last-child
+            display: none
+    &__btn
+      flex-direction: column
+      align-items: center
+      &>div
+        &+div
+          padding-left: 0
+          padding-top: 40px
+  #map
+    transform: none
+    padding-bottom: 400px
+  .social
+    svg
+      width: 63px
+      height: 63px
+    &--footer
+      svg
+        width: 45px
+        height: 45px
+  .contact
+    background: $color-white
+    height: auto
+    &__info
+      font-size: 30px
+      max-width: none
+      p
+        line-height: 45px
+    &__content, &__bg-wrapper
+      position: relative
+    &__content
+      padding-bottom: 50px
+      &>.container
+        height: auto
+    &__bg
+      width: 100%
+      &-wrapper
+        transform: none
+        width: 100%
+        left: inherit
+        &>div
+          transform: none
+          float: none
+          width: 100%
+      &-left
+        display: none
+      &-right
+        transform: none !important
+  .footer
+    text-align: center
+    padding-top: 40px
+    padding-bottom: 40px
+    &__logo
+      float: none
+      margin: 0 auto 70px
+      font-size: 30px
+      padding-left: 60px
+      width: 245px
+      height: 50px
+      span
+        line-height: 30px
+      small
+        font-size: 20px
+      img
+        width: 50px
+        height: 50px
+        top: 0
+        left: 0
+    &__nav
+      float: none
+      width: 100%
+      padding-bottom: 45px
+      ul
+        li
+          padding-left: 0
+          a
+            margin-bottom: 35px
+    &__wrapper
+      &>div
+        float: none
+        width: 100%
+      &-left
+        font-size: 30px
+      &-right
+        font-size: 20px
+        p
+          line-height: 30px
+          margin-bottom: 30px
+      &-col
+        width: 100%
+        float: none
+  .cdaka
+    &__list
+      &-row
+        flex-direction: column
+        margin: 0
+        align-items: center
+        &>div
+          width: auto
+          padding: 0
+    &__block
+      width: 557px
+      margin-bottom: 62px
+      &-img
+        img
+          height: 337px
+      &-btn
+        height: 115px
+        line-height: 115px
+        font-size: 35px
+      &-line
+        height: 8px
+        bottom: 107px
+        span
+          i
+            height: 18px
+            width: 18px
+            top: -7px
+      &-content
+        height: 295px
+        padding-left: 44px
+        padding-top: 55px
+        p
+          left: 46px
+          bottom: 25px
+          font-size: 30px
+          line-height: 40px
+      &-title
+        font-size: 35px
+        line-height: 45px
+        max-height: 100px
+        &::before
+          height: 5px
+          width: 214px
+    &__btn
+      flex-direction: column
+      align-items: center
+      &>div
+        &+div
+          padding-left: 0
+          padding-top: 40px
+  .header
+    &__logo
+      margin-left: -30px
+    &__btn
+      margin-right: -30px
+    &__phone
+      margin-right: 50px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -192,6 +404,8 @@
     padding: 30px 0
     &.about
       padding-top: 65px
+    &.club
+      padding-bottom: 90px
   .about
     &__right
       &-img
@@ -262,6 +476,24 @@
         height: auto
     &__title
       margin: 100px 0 50px 20px
+  .contact
+    &__info
+      font-size: 20px
+      p
+        line-height: 30px
+  .header
+    &__logo
+      margin-left: -5px
+    &__btn
+      margin-right: -15px
+    &__phone
+      margin-right: 70px
+      a
+        .icon
+          display: inline-block
+          vertical-align: -6px
+        span
+          display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -278,6 +510,8 @@
   .section
     &.about
       padding-top: 40px
+    &.club
+      padding-bottom: 60px
   .about
     &__right
       padding-top: 10px
@@ -330,7 +564,88 @@
         font-size: 35px
     &__content
       padding-bottom: 65px
-
+  .club
+    font-size: 20px
+    p
+      line-height: 30px
+    &__btn
+      .btn--border
+        padding-left: 10px
+        padding-right: 10px
+  .contact
+    &__content
+      padding-bottom: 40px
+    &__info
+      font-size: 15px
+      p
+        line-height: 20px
+  .social
+    svg
+      width: 40px
+      height: 40px
+  .footer
+    padding-top: 30px
+    padding-bottom: 30px
+    &__logo
+      padding-left: 45px
+      height: 38px
+      font-size: 20px
+      width: 175px
+      margin-bottom: 35px
+      span
+        line-height: 24px
+      small
+        font-size: 13px
+      img
+        left: 5px
+        top: 5px
+        width: 29px
+        height: 29px
+    &__nav
+      padding-bottom: 30px
+      ul
+        li
+          a
+            margin-bottom: 20px
+    &__wrapper
+      &>div
+        float: none
+        width: 100%
+      &-left
+        font-size: 20px
+      &-right
+        font-size: 15px
+        p
+          line-height: 20px
+          margin-bottom: 25px
+  .header
+    height: 67px
+    &-separator
+      height: 67px
+    &__nav
+      font-size: 25px
+    &__logo
+      padding-left: 45px
+      height: 38px
+      font-size: 20px
+      width: 175px
+      margin-bottom: 35px
+      span
+        line-height: 24px
+      small
+        font-size: 15px
+      img
+        left: 0px
+        top: 3px
+        width: 35px
+        height: 35px
+    &__btn
+      margin-right: -10px
+      margin-top: 20px !important
+    &__phone
+      margin-right: 18px
+      height: 67px
+      line-height: 67px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

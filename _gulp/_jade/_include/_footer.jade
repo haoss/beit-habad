@@ -2,5 +2,32 @@
 footer.footer
   .container
     
-    div &copy; 2018
-  
+    .footer__wrapper
+      .footer__wrapper-left
+        .footer__logo
+          img(src="./img/logo.png", alt="")
+          span Бейт Хабад 
+            small на Мичуринсоком
+            
+        nav.footer__nav
+          ul
+            li: a(href="#!") Об общине
+            li: a(href="#!") ЦДАКА
+            li: a(href="#!") Мероприятия
+            li: a(href="#!") Молодежный клуб
+            li: a(href="#!") Фотогалерея
+      .footer__wrapper-right
+        .footer__wrapper-col
+          p Община Бейт Хабад 
+            br
+            a(href="tel:") +7 (926) 633-17-00
+          p Россия г. Москва, улица Лобачевского дом 52/1
+        .footer__wrapper-col
+          p Раввин Шимон Краснодомский
+            br
+            a(href="tel:") +7  (926) 633-17-00
+          .social.social--footer
+            a(href="#!" target="_blank")
+              +iconFacebook
+            a(href="#!" target="_blank")
+              +iconVk

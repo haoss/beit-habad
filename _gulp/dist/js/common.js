@@ -72,6 +72,8 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
+  navMobile();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -92,7 +94,14 @@ $(window).on('load', function() {
 });
 
 $(window).on('scroll', function() { });
-$(window).on('resize', function() { });
+$(window).on('resize', function() {
+  var width = $(window).width();
+  if (width > 1199) {
+    $('.header__btn').removeClass('is-active');
+    $('.header__nav').removeClass('is-active');
+    $('.header-shadow').removeClass('is-active');
+  }
+});
 
 /*
 version 2015-09-23 14:30 GMT +2
@@ -153,5 +162,23 @@ function simpleForm(form, callback) {
     $(form).addClass('ajax-waiting');
 
     return false;
+  });
+}
+
+function navMobile(){
+  var btn = $('.header__btn');
+  var nav = $('.header__nav');
+  var shadow = $('.header-shadow');
+  btn.on('click', function(e){
+    e.preventDefault();
+    if($(this).hasClass('is-active')) {
+      $(this).removeClass('is-active');
+      nav.removeClass('is-active');
+      shadow.removeClass('is-active');
+    } else {
+      $(this).addClass('is-active');
+      nav.addClass('is-active');
+      shadow.addClass('is-active');
+    }
   });
 }

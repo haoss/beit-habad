@@ -28,6 +28,8 @@
   padding: 45px 0
   &.about
     padding-top: 90px
+  &.club
+    padding-bottom: 104px
 
 .about
   &__left
@@ -57,13 +59,14 @@
       margin: 0 -34px
       &>div
         padding: 0 33px
+        width: 33.3%
   &__block
     width: 300px
     margin-bottom: 40px
     position: relative
     &>a
       position: absolute
-      z-index: 25
+      z-index: 25 
       top: 0
       left: 0
       right: 0
@@ -92,6 +95,7 @@
         display: block
         opacity: 1
         transition: opacity 0.35s
+
     &-date
       position: absolute
       top: 0
@@ -315,3 +319,226 @@
         position: absolute
         left: 13px
         top: 13px
+
+.club
+  font-size: 20px
+  p
+    line-height: 30px
+  &__photo
+    overflow: hidden
+    margin-bottom: 42px
+    &-wrapper
+      display: flex
+      justify-content: center
+      img
+        display: block
+  &__btn
+    display: flex
+    justify-content: center
+    &>div
+      &+div
+        padding-left: 50px
+
+.contact
+  height: 633px
+  background-color: $color-gray
+  padding: 0 !important
+  position: relative
+  overflow: hidden
+  &__bg
+    position: relative
+    height: 100%
+    overflow: hidden
+    &-wrapper
+      position: absolute
+      width: 2300px
+      left: 50%
+      top: 0
+      bottom: 0
+      transform: translateX(-50%)
+      &>div
+        float: left
+        height: 100%
+        transform: skewX(-10deg)
+        overflow: hidden
+    &-left
+      background: $color-white
+      width: 51%
+    &-right
+      width: 49%
+      background:
+        color: $color-gray
+  &__content
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    pointer-events: none
+    z-index: 5
+    &>.container
+      height: 633px
+      // background: rgba(pink,.5)
+  &__info
+    font-size: 20px
+    max-width: 425px
+    pointer-events: auto
+    p
+      line-height: 30px
+      a
+        text-decoration: none
+        color: $primary-color
+        &:hover
+          color: $color-blue
+
+#map
+  position: relative
+  overflow: hidden
+  height: 0px
+  padding-bottom: 633px
+  background: white
+  transform: skewX(10deg) translateX(-150px)
+
+.social
+  pointer-events: auto
+  a
+    display: inline-block
+    &+a
+      margin-left: 23px
+  svg
+    width: 50px
+    height: 50px
+    path
+      fill: $color-black
+  &--footer
+    margin-left: -5px
+    svg
+      width: 30px
+      height: 30px
+    a
+      &+a
+        margin-left: 13px
+
+.cdaka
+  &__btn
+    display: flex
+    justify-content: center
+    &>div
+      &+div
+        padding-left: 50px
+  &__img
+    position: absolute
+    margin-left: -185px
+    margin-top: -20px
+    img
+      height: 189px
+      width: 100%
+      object-fit: cover
+  &__list
+    &-wrapper
+      overflow: hidden
+      position: relative
+      z-index: 5
+    &-row
+      display: flex
+      flex-wrap: wrap
+      margin: 0 -23px
+      &>div
+        padding: 0 23px
+        width: 33.3%
+  &__block
+    background-color: $color-white
+    border-radius: 10px
+    margin-bottom: 42px
+    position: relative
+    &-img
+      position: relative
+      overflow: hidden
+      border-radius: 10px 10px 0 0
+      img
+        border-radius: 10px 10px 0 0
+        display: block
+        height: 195px
+        object-fit: cover
+      a
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        z-index: 5
+    &-content
+      border-left: 1px solid #efefef
+      border-right: 1px solid #efefef
+      font-size: 15px
+      height: 166px
+      padding: 25px 24px 13px 24px
+      position: relative
+      p
+        position: absolute
+        bottom: 15px
+        left: 24px
+        margin: 0
+        line-height: 22px
+    &-btn
+      border: 1px solid $color-yellow
+      display: block
+      height: 64px
+      line-height: 64px
+      text-decoration: none
+      color: $primary-color
+      font-size: 20px
+      text-transform: uppercase
+      text-align: center
+      border-radius: 0 0 10px 10px
+    &-title
+      font-size: 20px
+      line-height: 30px
+      position: relative
+      display: inline-block
+      max-height: 65px
+      overflow: hidden
+      padding-bottom: 12px
+      a
+        text-decoration: none
+        color: $primary-color
+        &:hover
+          color: $color-blue
+      &::before
+        position: absolute
+        width: 233px
+        height: 3px
+        left: 0
+        bottom: 0
+        background: $primary-color
+        content: ''
+    &-line
+      height: 5px
+      border: 1px solid $color-yellow
+      border-top-width: 2px
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 59px
+      z-index: 5
+      span
+        display: block
+        position: absolute
+        left: 0
+        width: 0
+        top: 0
+        bottom: 0
+        background: $color-yellow
+        i
+          display: block
+          width: 10px
+          height: 10px
+          border: 4px solid $color-yellow
+          border-radius: 50%
+          right: 0
+          top: -4px
+          position: absolute
+          background: $color-white
+        &[style='width: 0%']
+          i
+            display: none

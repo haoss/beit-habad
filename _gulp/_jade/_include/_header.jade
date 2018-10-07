@@ -2,8 +2,29 @@
 header.header
   .container
     
+    button.header__btn.hamburger.hamburger--arrowalt-r(type='button')
+      span.hamburger-box
+        span.hamburger-inner
+    
     .header__logo
       a(href="#!")
-        img(src="./img/logo.png", alt="")
+      img(src="./img/logo.png", alt="")
+      span Бейт Хабад 
+        small на Мичуринсоком
+          
+    .header__phone
+      a(href="tel:")
+        i.icon.icon--5
+        span +7  ( 495 ) 744 - 86 - 72
+    
+    nav.header__nav
+      ul
+        li: a(href="#!") Об общине
+        li: a(href="#!") Мероприятия
+        li: a(href="#!") Фотогалерея
+        li: a(href="#!") ЦДАКА
+        li: a(href="#!") Молодежный клуб
+        li: a(href="#!") Контакты
 
 .header-separator
+.header-shadow

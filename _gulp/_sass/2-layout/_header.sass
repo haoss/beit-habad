@@ -6,6 +6,92 @@
   right: 0
   top: 0
   height: 75px
-  background-color: pink
+  background-color: $color-white
+  box-shadow: 0 0 5px rgba($color-black,.1)
   &-separator
     height: 75px
+  &__logo
+    white-space: nowrap
+    position: relative
+    padding-left: 45px
+    height: 38px
+    font-size: 20px
+    float: left
+    width: 175px
+    margin-top: 17px
+    a
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      z-index: 5
+    span
+      display: block
+      line-height: 24px
+    small
+      display: block
+      font-size: 13px
+    img
+      position: absolute
+      left: 5px
+      top: 5px
+      width: 29px
+      height: 29px
+  &__phone
+    float: right
+    height: 75px
+    line-height: 75px
+    font-size: 20px
+    font-family: $font-axiform-m
+    a
+      color: $primary-color
+      text-decoration: none
+      .icon
+        display: none
+  &__btn
+    display: none !important
+    margin-top: 23px !important
+    float: right
+    position: relative
+    z-index: 10
+  &__nav
+    padding-left: 200px
+    padding-right: 240px
+    font-size: 12px
+    font-family: $font-axiform-m
+    background: $color-white
+    z-index: 5
+    ul
+      margin: 0
+      padding: 0
+      display: flex
+      justify-content: space-between
+      li
+        list-style: none
+        margin: 0
+        &>a, &>span
+          display: block
+          line-height: 75px
+          height: 75px
+          color: $primary-color
+          text-decoration: none
+        &>a
+          &:hover
+            color: $color-blue
+        &.active
+          &>a, &>span
+            color: $color-blue
+  &-shadow
+    position: fixed
+    z-index: 400
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    background: rgba($color-black,.5)
+    opacity: 0
+    visibility: hidden
+    &.is-active
+      opacity: 1
+      visibility: visible
