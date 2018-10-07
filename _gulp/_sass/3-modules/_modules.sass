@@ -27,6 +27,8 @@
         bottom: 0
         background: $primary-color
         content: ''
+    &--past
+      opacity: 0.5
     &--event
       max-width: 470px
 
@@ -179,6 +181,12 @@
       &+div
         padding-left: 30px
         flex-grow: 1
+    &--past
+      .event__document
+        &-img, &-content p
+          opacity: 0.5
+      .event__label
+        opacity: 0.5
   &__label
     display: flex
     flex-wrap: wrap
