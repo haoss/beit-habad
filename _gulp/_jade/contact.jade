@@ -1,0 +1,94 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - Бейт Хабад' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content.content--all
+      
+      // Contacts
+      .section.contact
+        .contact__content
+          .container
+            
+            .content__head
+              .h1 Контактные данные
+            
+            .contact__info
+              p Община Бейт Хабад 
+                br
+                a(href="tel:") +7 (926) 633-17-00
+              p Россия г. Москва, улица Лобачевского дом 52/1
+                br
+                | Время работы: С 8:00 до 21:00
+              p Раввин Шимон Краснодомский
+                br
+                a(href="tel:") +7 (926) 633-17-00
+            
+            .social
+              a(href="#!" target="_blank")
+                +iconFacebook
+              a(href="#!" target="_blank")
+                +iconVk
+                
+        .contact__bg
+          .contact__bg-wrapper
+            .contact__bg-left
+            .contact__bg-right
+              #map
+              
+              script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+              script.
+                function initialize() {
+                var myLatlng = new google.maps.LatLng(55.6721513,37.4905056);
+                var map_options = {
+                  zoom: 16,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                  center: myLatlng,
+                  scrollwheel: false,
+                  disableDefaultUI: true
+                }
+                var map = new google.maps.Map(document.getElementById('map'), map_options)
+                var marker = new google.maps.Marker({
+                  position: myLatlng,
+                  map: map
+                });
+                /* Remove if you dont want B/W Google Map */
+                /*
+                var styles = [
+                {
+                featureType: "all",
+                stylers: [
+                { saturation: -100 }
+                ]
+                }
+                ];
+                map.setOptions({styles: styles});
+                */
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
