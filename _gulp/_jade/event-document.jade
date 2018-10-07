@@ -1,0 +1,119 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Мероприятие' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Мероприятие' + ' - Бейт Хабад' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content.content--all
+      .container
+        
+        .content__head.hidden-lg.hidden-md
+          h1 Уборка  на Востряковском еврейском кладбище
+        
+        // Event
+        .event__document
+          div
+            .event__document-img
+              img(src="./img/event/event-1.png", alt="")
+          div
+            .content__head.content__head--event.hidden-sm.hidden-xs
+              .h1 Уборка  на Востряковском еврейском кладбище
+            
+            .event__label
+              div
+                .event__label-block
+                  img(src="./img/icons/event-icon-1.png", alt="")
+                  span 15 июля
+              div
+                .event__label-block
+                  img(src="./img/icons/event-icon-2.png", alt="")
+                  span 19:00
+              div
+                .event__label-block
+                  img(src="./img/icons/event-icon-3.png", alt="")
+                  span Бесплатно
+              div.last
+                .event__label-block
+                  img(src="./img/icons/event-icon-4.png", alt="")
+                  span бул. Лобачевского 52/1
+            
+            .event__document-content
+              p Дорогие друзья! Приглашаем Вас в это воскресенье принять участие в Благотворительной Акции по уборке еврейского кладбища "Востряково". Начало мероприятия в 12:00 возле главного входа на "иудейский участок" Востряковского кладбище. 
+                br
+                | Пожалуйста зарегистрируйтесь, чтобы мы подготовили на вас кошерный обед. 
+              
+              .clear
+              a(href="#!").btn Записаться
+      
+      // Events
+      .section.event
+        .container
+          
+          .content__head
+            .h1 Другие мероприятия
+          
+        .event__list
+          .container
+            .event__list-wrapper
+              .event__list-row
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Пейсах - настоящий пасхальный седер 
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 20
+                        small мая
+                          br
+                          | 12:00
+                      img(src="./img/event/event-1.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Подарим праздник нуждающимся!
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 3
+                        small июня
+                          br
+                          | 12:00
+                      img(src="./img/event/event-2.png", alt="")
+                div
+                  .event__block
+                    a(href="#!")
+                    .event__block-title Спорт пурим
+                    .event__block-img
+                      span.span Подробнее
+                      span.event__block-date
+                        b 15
+                        small июля
+                          br
+                          | 12:00
+                      img(src="./img/event/event-3.png", alt="")
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

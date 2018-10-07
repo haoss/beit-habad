@@ -106,8 +106,9 @@
     font-size: 50px
     margin-bottom: 30px
     line-height: 1.25
+    line-height: 75px
   p
-    line-height: 30px
+    line-height: 35px
     margin-bottom: 32px
   .btn
     font-size: 20px
@@ -155,6 +156,19 @@
         small
           font-size: 18px
           line-height: 25px
+    &__document
+      flex-direction: column
+      &>div
+        &+div
+          padding-left: 0
+          padding-top: 40px
+      &-img
+        width: 500px
+      &-content
+        max-width: none
+        text-align: center
+        p
+          text-align: left
   .question
     &__form
       height: auto
@@ -434,6 +448,14 @@
         small
           font-size: 15px
           line-height: 20px
+    &__document
+      &-img
+        width: 420px
+    &__label
+      &>div
+        &:nth-last-child(2)
+          padding-left: 0
+          width: 100%
   .question
     &__form
       &-wrapper
@@ -502,8 +524,9 @@
   .h1, h1
     font-size: 30px
     margin-bottom: 35px
+    line-height: 45px
   p
-    line-height: 20px
+    line-height: 25px
     margin-bottom: 15px
   .btn
     font-size: 15px
@@ -540,6 +563,13 @@
         small
           font-size: 10px
           line-height: 14px
+    &__document
+      &-content
+        padding-top: 5px
+        .btn
+          margin-top: 20px
+      &-img
+        width: 100%
   .question
     &__form
       padding-left: 20px

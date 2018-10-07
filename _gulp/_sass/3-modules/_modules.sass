@@ -17,7 +17,8 @@
     .h1, h1
       font-family: $font-axiform-b
       position: relative
-      padding-bottom: 22px
+      line-height: 45px
+      padding-bottom: 10px
       &::before
         position: absolute
         width: 233px
@@ -26,6 +27,8 @@
         bottom: 0
         background: $primary-color
         content: ''
+    &--event
+      max-width: 470px
 
 .section
   padding: 45px 0
@@ -158,6 +161,45 @@
         color: #c0c0c0
       .event__block-img .span
         opacity: 1
+  &__document
+    display: flex
+    &-img
+      overflow: hidden
+      border-radius: 10px
+      width: 400px
+      img
+        border-radius: 10px
+        max-width: 100%
+        height: auto
+        display: block
+    &-content
+      max-width: 500px
+      padding-top: 15px
+    &>div
+      &+div
+        padding-left: 30px
+        flex-grow: 1
+  &__label
+    display: flex
+    flex-wrap: wrap
+    &>div
+      &+div
+        padding-left: 20px
+      &.last
+        width: 100%
+        padding-left: 0 !important
+    &-block
+      padding-left: 45px
+      min-height: 33px
+      white-space: nowrap
+      line-height: 33px
+      margin-bottom: 20px
+      position: relative
+      img, svg
+        position: absolute
+        left: 0
+        top: 0
+
 
 .question
   &__form
