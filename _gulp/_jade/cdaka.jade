@@ -1,0 +1,141 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Цдака' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Цдака' + ' - Бейт Хабад' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content.content--all
+      
+      // CDAKA
+      .section.cdaka.no--p-top
+        .container
+          
+          .content__head
+            .h1 ЦДАКА
+          
+          .cdaka__list
+            img(src="./img/star.png", alt="").cdaka__img
+            
+            .cdaka__list-content
+              p Цдака — одна из заповедей в иудаизме. Обязательное дело в пользу бедных, нуждающихся, а также на развитие проектов, способствующих распространению иудаизма и истинных знаний о нём и так далее. Дать нуждающимся — это, с точки зрения иудаизма, акт восстановления справедливости, то есть вещь обязательная. Давая цдаку, вы становитесь посредником между Богом и нуждающимся.
+              
+            .cdaka__list-wrapper
+              .cdaka__list-row
+                div
+                  .cdaka__block
+                    .cdaka__block-img
+                      a(href="#!")
+                      img(src="./img/cdaka/cdaka-1.png", alt="")
+                    .cdaka__block-content
+                      .cdaka__block-title
+                        a(href="#!") Подари Шабат!
+                      p Собрано:
+                        br
+                        | 81 710 из 150 000 руб.
+                    .cdaka__block-line
+                      span(style="width: 25%")
+                        i
+                    a(href="#!").cdaka__block-btn Поддержать
+                div
+                  .cdaka__block
+                    .cdaka__block-img
+                      a(href="#!")
+                      img(src="./img/cdaka/cdaka-2.png", alt="")
+                    .cdaka__block-content
+                      .cdaka__block-title
+                        a(href="#!") Помощь инвалиду оставшемуся без дома
+                      p Собрано:
+                        br
+                        | 299 921 из 288 000 руб.
+                    .cdaka__block-line
+                      span(style="width: 81%")
+                        i
+                    a(href="#!").cdaka__block-btn Поддержать
+                div
+                  .cdaka__block
+                    .cdaka__block-img
+                      a(href="#!")
+                      img(src="./img/cdaka/cdaka-3.png", alt="")
+                    .cdaka__block-content
+                      .cdaka__block-title
+                        a(href="#!") Помощь на восстановление зубов для 16-ти...
+                      p Собрано:
+                        br
+                        | 8 100 из 30 000 руб.
+                    .cdaka__block-line
+                      span(style="width: 15%")
+                        i
+                    a(href="#!").cdaka__block-btn Поддержать
+                div
+                  .cdaka__block
+                    .cdaka__block-img
+                      a(href="#!")
+                      img(src="./img/cdaka/cdaka-1.png", alt="")
+                    .cdaka__block-content
+                      .cdaka__block-title
+                        a(href="#!") Подари Шабат!
+                      p Собрано:
+                        br
+                        | 81 710 из 150 000 руб.
+                    .cdaka__block-line
+                      span(style="width: 55%")
+                        i
+                    a(href="#!").cdaka__block-btn Поддержать
+                div
+                  .cdaka__block
+                    .cdaka__block-img
+                      a(href="#!")
+                      img(src="./img/cdaka/cdaka-2.png", alt="")
+                    .cdaka__block-content
+                      .cdaka__block-title
+                        a(href="#!") Помощь инвалиду оставшемуся без дома
+                      p Собрано:
+                        br
+                        | 299 921 из 288 000 руб.
+                    .cdaka__block-line
+                      span(style="width: 98%")
+                        i
+                    a(href="#!").cdaka__block-btn Поддержать
+                div
+                  .cdaka__block
+                    .cdaka__block-img
+                      a(href="#!")
+                      img(src="./img/cdaka/cdaka-3.png", alt="")
+                    .cdaka__block-content
+                      .cdaka__block-title
+                        a(href="#!") Помощь на восстановление зубов для 16-ти...
+                      p Собрано:
+                        br
+                        | 8 100 из 30 000 руб.
+                    .cdaka__block-line
+                      span(style="width: 34%")
+                        i
+                    a(href="#!").cdaka__block-btn Поддержать
+          
+          .text-center
+            a(href="#!").btn Показать еще
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
