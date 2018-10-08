@@ -17,11 +17,34 @@
     .h1, h1
       font-family: $font-axiform-b
       position: relative
-      line-height: 45px
       padding-bottom: 10px
       &::before
         position: absolute
         width: 233px
+        height: 3px
+        left: 0
+        bottom: 0
+        background: $primary-color
+        content: ''
+    .h2, h2
+      font-family: $font-axiform-b
+      position: relative
+      padding-bottom: 10px
+      &::before
+        position: absolute
+        width: 133px
+        height: 3px
+        left: 0
+        bottom: 0
+        background: $primary-color
+        content: ''
+    .h3, h3
+      font-family: $font-axiform-b
+      position: relative
+      padding-bottom: 10px
+      &::before
+        position: absolute
+        width: 133px
         height: 3px
         left: 0
         bottom: 0
@@ -601,3 +624,100 @@
         &[style='width: 0%']
           i
             display: none
+    &--project
+      margin-bottom: 0
+      .cdaka__block
+        &-content
+          border: 3px solid #efefef
+          border-radius: 10px 10px 0 0
+          border-bottom: 0
+          height: 262px
+          font-size: 30px
+          padding: 35px 10px 10px 30px
+          p
+            line-height: 45px
+            position: relative
+            margin-bottom: 20px
+            left: inherit
+            bottom: inherit
+            strong
+              display: block
+            &:last-child
+              margin-bottom: 0
+        &-btn
+          height: 88px
+          line-height: 88px
+          border-width: 3px
+          font-size: 26px
+        &-line
+          height: 7px
+          border-width: 2px
+          bottom: 81px
+          background: $color-white
+          span
+            i
+              width: 14px
+              height: 14px
+              top: -6px
+
+.project
+  overflow: hidden
+  +clearfix
+  &__info
+    display: flex
+    margin-bottom: 40px
+    &-img
+      overflow: hidden
+      border-radius: 10px
+      width: 580px
+      img
+        border-radius: 10px
+        max-width: 100%
+        height: auto
+        display: block
+    &>div
+      &+div
+        padding-left: 15px
+        flex-grow: 1
+  &__gallery
+    margin-bottom: 35px
+    a
+      display: inline-block
+      margin-bottom: 10px
+      &+a
+        margin-left: 8px
+    img
+      border: 1px solid #f0f0f0
+      width: 165px
+      &:hover
+        border-color: $color-yellow
+  &__donation
+    margin-bottom: 45px
+    display: flex
+    &>div
+      &+div
+        padding-left: 34px
+    &-form
+      width: 597px
+      border: 3px solid #efefef
+      border-radius: 10px
+      overflow: hidden
+      min-height: 50px
+      img
+        display: block
+        max-width: 100%
+        height: auto
+    &-block
+      margin-bottom: 15px
+      overflow: hidden
+      border: 1px solid #efefef
+      border-radius: 10px
+      background: $color-white
+      padding: 14px 10px
+      text-align: center
+      font-size: 15px
+      hr
+        width: 60px
+        margin: 7px auto
+        height: 1px
+        background: $color-black

@@ -57,6 +57,12 @@
         margin: 0 -5px
         &>div
           padding: 0 5px
+    &__block
+      &--project
+        .cdaka__block-content
+          height: 240px
+          padding-top: 20px
+          padding-left: 20px
   .header
     &__logo
       margin-top: 12px
@@ -97,6 +103,18 @@
     &__phone
       margin-right: 120px
       font-size: 30px
+  .project
+    &__info
+      &-img
+        width: 540px
+    &__donation
+      flex-direction: column
+      &-list
+        max-width: 414px
+      &>div
+        &+div
+          padding-left: 0px
+          padding-top: 40px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -105,8 +123,11 @@
   .h1, h1
     font-size: 50px
     margin-bottom: 30px
-    line-height: 1.25
-    line-height: 75px
+    line-height: 75px !important
+  .h2, h2
+    font-size: 30px
+    line-height: 45px
+    margin-bottom: 40px
   p
     line-height: 35px
     margin-bottom: 32px
@@ -397,6 +418,15 @@
         &::before
           height: 5px
           width: 214px
+      &--project
+        margin-bottom: 0 !important
+        .cdaka__block-content
+          height: 390px
+          padding-top: 40px
+          padding-left: 28px
+          p
+            font-size: 50px
+            line-height: 75px
     &__btn
       flex-direction: column
       align-items: center
@@ -411,6 +441,23 @@
       margin-right: -30px
     &__phone
       margin-right: 50px
+  .project
+    &__info
+      flex-direction: column
+      &-img
+        width: 580px
+      &>div
+        &+div
+          padding-left: 0
+          padding-top: 50px
+    &__donation
+      &-block
+        font-size: 20px
+        margin-bottom: 20px
+  .content
+    &__head
+      &--project
+        max-width: none
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -551,6 +598,22 @@
         &::before
           height: 4px
           width: 163px
+      &--project
+        .cdaka__block-content
+          padding-left: 15px
+  .project
+    &__info
+      &-img
+        width: 420px
+      &>div
+        &+div
+          padding-top: 40px
+    &__donation
+      &-form
+        width: 420px
+    &__gallery
+      img
+        width: 205px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -559,7 +622,7 @@
   .h1, h1
     font-size: 30px
     margin-bottom: 35px
-    line-height: 45px
+    line-height: 45px !important
   p
     line-height: 25px
     margin-bottom: 15px
@@ -750,6 +813,40 @@
         &::before
           height: 2px
           width: 108px
+      &--project
+        width: 100%
+        .cdaka__block
+          &-content
+            height: 260px
+            padding-top: 30px
+            p
+              font-size: 30px
+              line-height: 45px
+          &-btn
+            height: 65px
+            line-height: 65px
+            font-size: 20px
+          &-line
+            bottom: 58px
+  .project
+    &__info
+      &-img
+        width: 100%
+      &>div
+        &+div
+          padding-top: 40px
+    &__donation
+      &-form
+        width: 280px
+      &-list
+        width: 100%
+        max-width: inherit
+    &__gallery
+      a
+        &+a
+          margin-left: 0
+      img
+        width: 225px
 
 @media screen and (max-width: 481px) and (orientation: landscape)
   .header
@@ -778,7 +875,7 @@
     min-width: 320px
   .container
     .section
-      min-width: inherit
+      min-width: 0
   .visible
     display: block !important
     opacity: 1 !important

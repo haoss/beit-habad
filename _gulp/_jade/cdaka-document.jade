@@ -21,18 +21,63 @@ html(lang="ru")
           h1 Помощь на восстановление зубов для 16-ти летнего мальчика
         
         // Cdaka
-        .project
+        .section.project.no--p-top
           .project__info
             div
               .project__info-img
-                img(src="./img/event/event-1.png", alt="")
+                img(src="./img/cdaka/cdaka-3.png", alt="")
             div
-              p 1
+              .cdaka__block.cdaka__block--project
+                .cdaka__block-content
+                  p Цель проекта:
+                    strong 30 000 руб.
+                  p Собрано:
+                    strong 8 100  руб.
+                .cdaka__block-line
+                  span(style="width: 25%")
+                    i
+                a(href="#!").cdaka__block-btn Поддержать
                 
           .project__content
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           
-          .project__gallery
+          .project__gallery.gallery
+            a(href="./img/gallery/gallery-doc-1.png").gallery-item
+              img(src="./img/gallery/gallery-doc-1.png", alt="")
+            a(href="./img/gallery/gallery-doc-2.png").gallery-item
+              img(src="./img/gallery/gallery-doc-2.png", alt="")
+            
+          .project__donation
+            div
+              .content__head
+                h2 Поддержите проект 
+              .project__donation-form
+                img(src="./img/donation.png", alt="")
+            div
+              .content__head
+                h2 Община «Бейт - Хабад» благодарит своих партнеров в добрых делах!
+
+              .project__donation-list
+                .project__donation-block
+                  .project__donation-title Добровольное пожертвование
+                  hr
+                  .project__donation-info Инна - 1 000 руб
+                .project__donation-block
+                  .project__donation-title Добровольное пожертвование
+                  hr
+                  .project__donation-info Алексей - 15 000 руб
+                .project__donation-block
+                  .project__donation-title Добровольное пожертвование
+                  hr
+                  .project__donation-info Мойша - 750 000 руб
+                .text-center
+                  a(href="#!").btn ВСЕ Спонсоры
+          
+          .content__share
+            .content__head
+              h3 Поделитесь проектом с друзьями
+            a(href="#!")
+              img(src="./img/share.png", alt="")
       
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")
