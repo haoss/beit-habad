@@ -73,6 +73,7 @@ $(document).on('ready', function(){
   });
 
   navMobile();
+  $('.working__block ul').equalHeights();
 
   // Chrome Smooth Scroll
   try {

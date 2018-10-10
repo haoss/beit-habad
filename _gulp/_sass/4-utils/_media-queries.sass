@@ -115,6 +115,12 @@
         &+div
           padding-left: 0px
           padding-top: 40px
+  .working
+    &__block
+      width: 400px
+      &-img
+        img
+          width: 400px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -481,6 +487,46 @@
         svg
           width: 35px
           height: 35px
+  .working
+    &__list
+      flex-direction: column
+      &>div
+        width: 100%
+        &:last-child
+          .working__block
+            margin-bottom: 0
+    &__block
+      width: 100%
+      margin-bottom: 40px !important
+
+      &-img
+        img
+          width: 512px
+      ul
+        height: auto !important
+        li
+          line-height: 30px
+  .about-top
+    height: auto
+    background-position: 35% -30px
+    &>.container
+      width: 100%
+      background: rgba($color-black,.7)
+    &__div
+      display: none
+    &__text
+      float: none
+      width: 100%
+      margin: 0 auto
+      background: none
+      height: auto
+      min-height: 790px
+      padding-top: 85px
+      padding-bottom: 50px
+      padding-left: 0
+      padding-right: 0
+      p
+        line-height: 30px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -643,6 +689,17 @@
         width: 100%
     &__block
       margin-bottom: 40px
+  .working
+    &__block
+      &-img
+        img
+          width: 420px
+      .content__head
+        white-space: normal
+  .about-top
+    background-size: 440%
+    &__text
+      padding-top: 55px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -884,6 +941,21 @@
       &-title
         font-size: 25px
         line-height: 35px
+  .working
+    &__block
+      &-img
+        img
+          width: 280px
+      ul
+        li
+          line-height: 25px
+  .about-top
+    &__text
+      padding-bottom: 60px
+      padding-top: 40px
+      min-height: inherit
+      p
+        line-height: 20px
 
 @media screen and (max-width: 481px) and (orientation: landscape)
   .header

@@ -760,3 +760,58 @@
       svg
         width: 29px
         height: 29px
+
+.working
+  &__list
+    padding-top: 30px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &>div
+      &:last-child, &:nth-last-child(2)
+        .working__block
+          margin-bottom: 0
+  &__block
+    width: 425px
+    margin-bottom: 50px
+    ul
+      padding: 0
+      li
+        list-style: none
+        line-height: 22px
+    &-img
+      img
+        width: 425px
+        display: block
+    .content__head
+      white-space: nowrap
+
+.about-top
+  height: 633px
+  position: relative
+  overflow: hidden
+  background:
+    position: top center
+    repeat: no-repeat
+  &__text
+    float: right
+    width: 600px
+    color: $color-white
+    padding: 75px 30px 10px 30px
+    background: rgba($color-black,.7)
+    height: 633px
+    margin-right: -70px
+    p
+      line-height: 22px
+      &:last-child
+        margin-bottom: 0
+  h1, .h1
+    font-family: $font-axiform-b
+    color: $color-white
+  &__div
+    background: $color-white
+    z-index: 5
+    position: absolute
+    height: 633px
+    width: 560px
+    transform: skewX(-15deg) translateX(-640px)

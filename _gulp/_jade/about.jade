@@ -1,0 +1,220 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Об общине' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Об общине' + ' - Бейт Хабад' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      // Section top
+      .section.about-top.no--p(style="background-image: url('./img/document/about-top.jpg');")
+        .container
+          .about-top__div
+          .about-top__text
+            h1 Община «Бейт Хабад» возле МГИМО
+            p На данный момент община насчитывает десятки еврейских семей, охваченных теплом и заботой об их еврейском будущем. Сотни еврейских студентов посещают уроки Торы и праздники, проводимые в стенах МГИМО, активно работает воскресный детский клуб «Римон», детский сад «Национальный Образовательный Комплекс» для самых маленьких.
+            p В синагоге проходят молитвы в Миньяне и еврейские праздники. Для самых старших членов общины работает «Колель Тора». Женский Клуб «Эшет Хаиль» работает под руководством ребецен Ханы Краснодомской. Десятки членов общины посещают регулярные уроки Торы и встречи с раввинами со всего Мира.
+      
+
+      // Sponsor
+      .section.sponsor.no--p-bottom
+        .container
+          .content__head
+            .h1 Люди общины
+          
+          .sponsor__list
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-1.png", alt="")
+                .sponsor__block-title Шимон
+                  br
+                  | Краснодомский
+                .sponsor__block-untitle Ассистент раввина
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-2.png", alt="")
+                .sponsor__block-title Авраам
+                  br
+                  | Подабедов
+                .sponsor__block-untitle Ассистент раввина
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-3.png", alt="")
+                .sponsor__block-title Мойша
+                  br
+                  | Стародубский
+                .sponsor__block-untitle Социальный деятель
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-4.png", alt="")
+                .sponsor__block-title Натан
+                  br
+                  | Вальдман
+                .sponsor__block-untitle Владелец каршеринга
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-5.png", alt="")
+                .sponsor__block-title Дмитрий
+                  br
+                  | Казацкий
+                .sponsor__block-untitle CEO Digital Agency
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-6.png", alt="")
+                .sponsor__block-title Михоэль 
+                  br
+                  | Лидогостер
+                .sponsor__block-untitle Социальный деятель
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+      
+      // Working
+      .section.working.no--p-top
+        .container
+          .content__head
+            .h1 Деятельность общины
+          
+          .working__list
+            div
+              .working__block
+                .content__head
+                  h2 Социальная деятельность
+                ul
+                  li - Помощь пожилым людям
+                  li - Сбор благотворительность
+                  li - Организация благотворительных мероприятий 
+                .working__block-img
+                  img(src="./img/working/working-img-1.png", alt="")
+            div
+              .working__block
+                .content__head
+                  h2 Образовательная деятельность
+                ul
+                  li - Беспалтные уроки иврита
+                  li - Оплата обучения для детей общины
+                  li - Организация экскурсий и других образовательных мероприятий
+                .working__block-img
+                  img(src="./img/working/working-img-2.png", alt="")
+            div
+              .working__block
+                .content__head
+                  h2 Развлечения 
+                ul
+                  li - Выездные туристические мероприятия 
+                  li - Шабат / Шавуот 
+                  li - Другие 
+                .working__block-img
+                  img(src="./img/working/working-img-3.png", alt="")
+            div
+              .working__block
+                .content__head
+                  h2 Предпринимательская деятельность
+                ul
+                  li - Создание сети  связей и знакомств
+                  li - Обсуждения и передача мылей / опыта
+                  li - Создание деловых отношений для совместой  деятельности 
+                .working__block-img
+                  img(src="./img/working/working-img-4.png", alt="")
+      
+      // Gallery
+      .section.gallery.no--p-top
+        .container
+          
+          .content__head
+            .h1 Фотогалерея
+          
+          .gallery__list
+            .gallery__list-wrapper.gallery__list-wrapper--main
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-1.png", alt="")
+                  .gallery__block-title EUROSTARS - тур по Европе
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-2.png", alt="")
+                  .gallery__block-title СПОРТ Пурим
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-3.png", alt="")
+                  .gallery__block-title Суккот
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-4.png", alt="")
+                  .gallery__block-title Ханука 5775
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-5.png", alt="")
+                  .gallery__block-title Подарки на Пурим - благотворительная акция
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-6.png", alt="")
+                  .gallery__block-title Внесение свитка Торы в Бейт Хабад на Мичуринском
+            .gallery__list-btn
+              a(href="#!").btn Все фото
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
