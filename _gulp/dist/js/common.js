@@ -104,59 +104,71 @@ $(window).on('resize', function() {
 });
 
 /*
-version 2015-09-23 14:30 GMT +2
+version 2015-11-27 17:00 GMT +2
 */
-function simpleForm(form, callback) {
-  $(document).on('submit', form, function(e){
+
+function simpleForm(form, callback, precallback) {
+   $(document).on('submit', form, function(e){
     e.preventDefault();
+
     var formData = {};
+
     var hasFile = false;
-    if ($(this).find('[type=file]').length < 1) {
-      formData = $(this).serialize();
+
+    if ($(this).find('[type=file]').length < 1 || $(this).find('[type=file]')[0]['files'].length == 0) {
+        formData = $(this).serialize();
     }
     else {
-      formData = new FormData();
-      $(this).find('[name]').each(function(){
+        formData = new FormData();
+        $(this).find('[name]').each(function(){
 
-        switch($(this).prop('type')) {
+            switch($(this).prop('type')) {
 
-          case 'file':
-            if ($(this)[0]['files'].length > 0) {
-              formData.append($(this).prop('name'), $(this)[0]['files'][0]);
-              hasFile = true;
+                case 'file':
+                    if ($(this)[0]['files'].length > 0) {
+                        formData.append($(this).prop('name'), $(this)[0]['files'][0]);
+                        hasFile = true;
+                    }
+                    break;
+
+                case 'radio':
+                case 'checkbox':
+                    if (!$(this).prop('checked')) {
+                        break;
+                    }
+                    formData.append($(this).prop('name'), $(this).val().toString());
+                    break;
+
+                default:
+                    formData.append($(this).prop('name'), $(this).val().toString());
+                    break;
             }
-            break;
-
-          case 'radio':
-          case 'checkbox':
-            if (!$(this).prop('checked')) {
-              break;
-            }
-            formData.append($(this).prop('name'), $(this).val().toString());
-            break;
-
-          default:
-            formData.append($(this).prop('name'), $(this).val().toString());
-            break;
-        }
-      });
+        });
     }
 
     $.ajax({
-      url: $(this).prop('action'),
-      data: formData,
-      type: 'POST',
-      contentType : hasFile ? 'multipart/form-data' : 'application/x-www-form-urlencoded',
-      cache       : false,
-      processData : false,
-      success: function(response) {
-        $(form).removeClass('ajax-waiting');
-        $(form).html($(response).find(form).html());
+        url: $(this).prop('action'),
+        data: formData,
+        type: 'POST',
+        contentType : hasFile ? false : 'application/x-www-form-urlencoded',
+        cache       : false,
+        processData : !hasFile,
+        success: function(response) {
+            $(form).removeClass('ajax-waiting');
 
-        if (typeof callback === 'function') {
-          callback(response);
+            if (typeof precallback === 'function') {
+                if (precallback(response) === false) {
+                    return true;
+                }
+            }
+
+            $(form).html($(response).find(form).html());
+
+
+            if (typeof callback === 'function') {
+                callback(response);
+            }
         }
-      }
     });
 
     $(form).addClass('ajax-waiting');
