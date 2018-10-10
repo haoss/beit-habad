@@ -1,0 +1,145 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Карточка проекта' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Карточка проекта' + ' - Бейт Хабад' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content.content--all
+      .container
+        
+        .content__head
+          h1 Спонсоры общины
+          
+        h2.no--m Община «Бейт - Хабад» благодарит
+          br
+          | zвоих партнеров в добрых делах!
+        
+        .section.sponsor
+          .sponsor__list
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-1.png", alt="")
+                .sponsor__block-title Шимон
+                  br
+                  | Краснодомский
+                .sponsor__block-untitle Ассистент раввина
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-2.png", alt="")
+                .sponsor__block-title Авраам
+                  br
+                  | Подабедов
+                .sponsor__block-untitle Ассистент раввина
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-3.png", alt="")
+                .sponsor__block-title Мойша
+                  br
+                  | Стародубский
+                .sponsor__block-untitle Социальный деятель
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-4.png", alt="")
+                .sponsor__block-title Натан
+                  br
+                  | Вальдман
+                .sponsor__block-untitle Владелец каршеринга
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-5.png", alt="")
+                .sponsor__block-title Дмитрий
+                  br
+                  | Казацкий
+                .sponsor__block-untitle CEO Digital Agency
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-6.png", alt="")
+                .sponsor__block-title Михоэль 
+                  br
+                  | Лидогостер
+                .sponsor__block-untitle Социальный деятель
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-7.png", alt="")
+                .sponsor__block-title Изя
+                  br
+                  | Борисов
+                .sponsor__block-untitle Учитель
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+            div
+              .sponsor__block
+                .sponsor__block-img
+                  img(src="./img/sponsor/sponsor-img-8.png", alt="")
+                .sponsor__block-title Давид
+                  br
+                  | Лужниченский
+                .sponsor__block-untitle Банкир
+                .sponsor__block-social
+                  a(href="#!" target="_blank")
+                    +iconFacebook
+                  a(href="#!" target="_blank")
+                    +iconVk
+          .text-center
+            a(href="#!").btn Показать еще
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

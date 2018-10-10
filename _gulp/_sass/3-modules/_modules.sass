@@ -63,6 +63,8 @@
     padding-top: 90px
   &.club
     padding-bottom: 104px
+  &.sponsor
+    padding-bottom: 95px
 
 .about
   &__left
@@ -232,7 +234,6 @@
         position: absolute
         left: 0
         top: 0
-
 
 .question
   &__form
@@ -721,3 +722,41 @@
         margin: 7px auto
         height: 1px
         background: $color-black
+
+.sponsor
+  &__list
+    display: flex
+    flex-wrap: wrap
+    &>div
+      width: 25%
+  &__block
+    text-align: center
+    margin-bottom: 70px
+    &-img
+      overflow: hidden
+      margin-bottom: 20px
+      img
+        display: block
+        width: 180px
+        height: 180px
+        object-fit: cover
+        border-radius: 50%
+        margin: 0 auto
+    &-title
+      font-size: 20px
+      font-family: $font-axiform-b
+      line-height: 30px
+      margin-bottom: 5px
+    &-untitle
+      font-size: 13px
+      line-height: 20px
+      margin-bottom: 5px
+    &-social
+      a
+        display: inline-block
+        text-decoration: none
+        &+a
+          margin-left: 10px
+      svg
+        width: 29px
+        height: 29px

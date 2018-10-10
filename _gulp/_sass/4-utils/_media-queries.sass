@@ -136,6 +136,8 @@
   .section
     &.about
       padding-top: 80px
+    &.sponsor
+      padding-bottom: 65px
   .about
     &__left
       float: none
@@ -458,6 +460,27 @@
     &__head
       &--project
         max-width: none
+  .sponsor
+    &__list
+      &>div
+        width: 50%
+    &__block
+      margin-bottom: 100px
+      &-img
+        img
+          height: 225px
+          width: 225px
+      &-title
+        font-size: 30px
+        line-height: 45px
+        margin-bottom: 10px
+      &-untitle
+        font-size: 15px
+        margin-bottom: 15px
+      &-social
+        svg
+          width: 35px
+          height: 35px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -614,6 +637,12 @@
     &__gallery
       img
         width: 205px
+  .sponsor
+    &__list
+      &>div
+        width: 100%
+    &__block
+      margin-bottom: 40px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -623,6 +652,9 @@
     font-size: 30px
     margin-bottom: 35px
     line-height: 45px !important
+  .h2, h2
+    font-size: 20px
+    line-height: 30px
   p
     line-height: 25px
     margin-bottom: 15px
@@ -847,6 +879,11 @@
           margin-left: 0
       img
         width: 225px
+  .sponsor
+    &__block
+      &-title
+        font-size: 25px
+        line-height: 35px
 
 @media screen and (max-width: 481px) and (orientation: landscape)
   .header
