@@ -838,5 +838,84 @@
 .mfp
   &-bg
     background: rgba($color-black,.7)
+    &.popupBg.mfp-ready
+      background: rgba($color-white,.5)
   &-counter
     color: $color-white
+
+
+.popup
+  &__wrapper
+    width: 100%
+    max-width: 466px
+    border-radius: 10px
+    border: 3px solid #efefef
+    background: $color-white
+    margin: 0 auto
+    padding: 28px 10px 33px 10px
+    position: relative
+    &-close
+      width: 11px
+      height: 11px
+      position: absolute
+      right: -23px
+      top: 7px
+      background: url('../img/icons/close.png')
+      cursor: pointer
+    &-form
+      width: 250px
+      margin: 0 auto
+      .form
+        &-control
+          background: #efefef
+        &-group
+          margin-bottom: 10px
+    &-btn
+      padding-top: 20px
+      text-align: center
+  &__head
+    margin-bottom: 28px
+    text-align: center
+    &>div
+      font-family: $font-axiform-b
+      position: relative
+      padding-bottom: 15px
+      display: inline-block
+      font-size: 20px
+      line-height: 30px
+      &::before
+        position: absolute
+        width: 58px
+        height: 3px
+        left: 0
+        bottom: 0
+        background: $primary-color
+        content: ''
+        left: 50%
+        transform: translateX(-50%)
+  &__close
+    text-align: center
+    font-size: 13px
+    padding-top: 15px
+    cursor: pointer
+    a
+      font-family: $font-axiform-b
+      color: #2d2d2d
+
+.join
+  &__club
+    position: relative
+    width: 832px
+    border: 3px solid #e8e8e8
+    overflow: hidden
+    border-radius: 10px
+    margin: 0 auto
+    padding: 33px 0 20px 33px
+    &-img
+      position: absolute
+      top: 0
+      right: 0
+      width: 451px
+      display: block
+    .content__head
+      max-width: 340px
