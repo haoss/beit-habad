@@ -316,6 +316,25 @@
       .span
         opacity: 1
         visibility: visible
+  &__document
+    margin-bottom: 25px
+    &-list
+      margin: 0 -1.5px 26px -1.5px
+      +clearfix
+      &>a
+        float: left
+        overflow: hidden
+        margin: 1.5px
+        width: calc(10% - 3px)
+        img
+          display: block
+          width: 100px
+          height: 100px
+          object-fit: cover
+          opacity: 1
+          transition: opacity 0.35s
+          &:hover
+            opacity: 0.5
 
 .welcome
   height: 633px
@@ -815,3 +834,9 @@
     height: 633px
     width: 560px
     transform: skewX(-12deg) translateX(-620px)
+
+.mfp
+  &-bg
+    background: rgba($color-black,.7)
+  &-counter
+    color: $color-white

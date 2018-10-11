@@ -121,6 +121,14 @@
       &-img
         img
           width: 400px
+  .gallery
+    &__document
+      &-list
+        &>a
+          width: calc(12.5% - 3px)
+          img
+            width: 104px
+            height: 104px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -527,6 +535,17 @@
       padding-right: 0
       p
         line-height: 30px
+  .gallery
+    &__document
+      &-list
+        margin-left: -2px
+        margin-right: -2px
+        &>a
+          width: calc(20% - 4px)
+          margin: 2px
+          img
+            width: 127px
+            height: 127px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -700,6 +719,14 @@
     background-size: 440%
     &__text
       padding-top: 55px
+  .gallery
+    &__document
+      &-list
+        &>a
+          width: calc(33.3% - 4px)
+          img
+            width: 100%
+            height: auto
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // Document ready
 $(document).on('ready', function(){
@@ -27,7 +27,8 @@ $(document).on('ready', function(){
       delegate: '.gallery-item',
       type: 'image',
       gallery:{
-        enabled:true
+        enabled: true,
+        tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
       },
       zoom: {
         enabled: true, // By default it's false, so don't forget to enable it
