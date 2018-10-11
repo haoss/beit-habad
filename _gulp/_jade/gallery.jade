@@ -1,0 +1,80 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Фотогалерея' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Фотогалерея' + ' - Бейт Хабад' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content.content--all
+      
+      // Gallery
+      .section.gallery.no--p-top
+        .container
+          
+          .content__head
+            .h1 Фотогалерея
+          
+          .gallery__list
+            .gallery__list-wrapper.gallery__list-wrapper--main
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-1.png", alt="")
+                  .gallery__block-title EUROSTARS - тур по Европе
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-2.png", alt="")
+                  .gallery__block-title СПОРТ Пурим
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-3.png", alt="")
+                  .gallery__block-title Суккот
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-4.png", alt="")
+                  .gallery__block-title Ханука 5775
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-5.png", alt="")
+                  .gallery__block-title Подарки на Пурим - благотворительная акция
+              div
+                .gallery__block
+                  a(href="#!")
+                  span.span Открыть альбом
+                  img(src="./img/gallery/gallery-6.png", alt="")
+                  .gallery__block-title Внесение свитка Торы в Бейт Хабад на Мичуринском
+            .gallery__list-btn
+              a(href="#!").btn Все фото
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
